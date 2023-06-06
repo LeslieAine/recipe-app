@@ -1,0 +1,13 @@
+<div>
+    <nav class="nav">
+        <div class="left-nav">
+            LOGO
+        </div>
+        <div class="right-nav">
+            <h4><%= current_user.name %></h4>
+            <div>
+                <%= button_to 'Sign out', destroy_user_session_path, method: :delete%>
+            </div>
+        </div>
+    </nav>
+</div>
