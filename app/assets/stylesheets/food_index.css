@@ -1,0 +1,17 @@
+.food-table {
+    border-collapse: collapse;
+    /* width: 90%; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .food-table th, .food-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .food-table th {
+    background-color: #f2f2f2;
+  }
+  
