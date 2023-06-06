@@ -13,3 +13,24 @@
     height: 100px;
     width: auto;
 }
+
+.right-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3 {
+    margin-bottom: 1%;
+}
+
+.b-box {
+    display: flex;
+    justify-content: end;
+}
+
+.sign-out {
+    background-color: rgb(255, 174, 0);
+    border-radius: 16px;
+    border: solid 0.5px goldenrod;
+}
