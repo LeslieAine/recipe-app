@@ -1,0 +1,15 @@
+.nav-wrapper {
+    padding: 0% 5%;
+}
+
+.nav {
+    border-bottom: 4px solid rgb(236, 236, 236);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
