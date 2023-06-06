@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag "food_index" %>
+<h1>HERE IS FOOD INDEX</h1>
+
+<table class="food-table">
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Measurement unit</th>
+      <th>Unit price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Food.all.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.measurement_unit %></td>
+        <td><%= number_to_currency(food.price / food.quantity) %></td>
+        <td><%= button_to 'Delete', food_path(food), method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
