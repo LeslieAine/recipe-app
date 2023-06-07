@@ -1,23 +1,30 @@
 <%= stylesheet_link_tag "food_index" %>
-<h1>HERE IS FOOD INDEX</h1>
+<%= render "shared/nav"%>
+<h1>ALL FOOD LIST</h1>
 
-<table class="food-table">
-  <thead>
-    <tr>
-      <th>Food</th>
-      <th>Measurement unit</th>
-      <th>Unit price</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% Food.all.each do |food| %>
+<div class="add-box">
+  <%= link_to "Add Food", new_food_path, class: "add-button" %>
+</div>
+
+<div class="table-wrapper">
+  <table class="food-table">
+    <thead>
       <tr>
-        <td><%= food.name %></td>
-        <td><%= food.measurement_unit %></td>
-        <td><%= number_to_currency(food.price / food.quantity) %></td>
-        <td><%= button_to 'Delete', food_path(food), method: :delete %></td>
+        <th>Food</th>
+        <th>Measurement unit</th>
+        <th>Unit price</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% Food.all.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measurement_unit %></td>
+          <td><%= number_to_currency(food.price / food.quantity) %></td>
+          <td><%= button_to 'Delete', food_path(food.id), method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
