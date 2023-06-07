@@ -10,9 +10,15 @@
             <%= link_to 'REMOVE', recipe_path(recipe), data: { turbo_method: :delete, confirm: 'Are you sure?' } %>
 
         </div>
-        <p><%= recipe.description %></p>
+        <p class="recipe-desc"><%= recipe.description %></p>
  </div>
     <%end%>
+
+    <div class='recipe_add'>
+        <h1><%= link_to 'Add new Recipe', new_recipe_path, class:'recipe_add_btn' %></h1>
+    </div>
+
+    <h1> <%= link_to 'Public Recipes', public_recipes_path, class:'recipe_add_btn' %></h1>
 
 
 </div>
