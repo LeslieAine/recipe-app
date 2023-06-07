@@ -1,0 +1,77 @@
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-big {
+  height: 350px;
+  width: auto;
+}
+
+/* Sign-up form container */
+.sign-up-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+/* Form fields */
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Submit button */
+.actions {
+  text-align: center;
+}
+
+.actions input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Error messages */
+.error-messages {
+  color: #f00;
+  margin-bottom: 15px;
+}
+
+/* Shared links */
+.shared-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.shared-links a {
+  color: #666;
+  text-decoration: none;
+}
+
+.shared-links a:hover {
+  text-decoration: underline;
+}
