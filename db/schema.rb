@@ -10,27 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_184726) do
+ActiveRecord::Schema[7.0].define(version: 20_230_606_184_726) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "recipe_foods", force: :cascade do |t|
-    t.integer "quantity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "recipe_id", null: false
-    t.index ["recipe_id"], name: "index_recipe_foods_on_recipe_id"
+  create_table 'recipe_foods', force: :cascade do |t|
+    t.integer 'quantity'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.bigint 'recipe_id', null: false
+    t.index ['recipe_id'], name: 'index_recipe_foods_on_recipe_id'
   end
 
-  create_table "recipes", force: :cascade do |t|
-    t.string "name"
-    t.string "preparation_time"
-    t.string "cooking_time"
-    t.text "description"
-    t.boolean "public"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'recipes', force: :cascade do |t|
+    t.string 'name'
+    t.string 'preparation_time'
+    t.string 'cooking_time'
+    t.text 'description'
+    t.boolean 'public'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  add_foreign_key "recipe_foods", "recipes"
+  add_foreign_key 'recipe_foods', 'recipes'
 end

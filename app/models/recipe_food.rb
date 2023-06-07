@@ -1,5 +1,5 @@
 class RecipeFood < ApplicationRecord
-    belongs_to :recipe
+  belongs_to :recipe
   belongs_to :foods
 
   validates :quantity, presence: { message: 'Quantity is required' },
