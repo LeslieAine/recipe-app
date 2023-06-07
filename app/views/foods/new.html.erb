@@ -1,4 +1,9 @@
-<h1>ADD FOOD HERE</h1>
+<%= stylesheet_link_tag "food_new" %>
+
+<div class="page">
+<div class="page-wrapper">
+
+<h1>ADD FOOD</h1>
 <%= form_with model: @food, url: foods_path, method: :post, local: true, scope: :food do |form| %>
   <div class="add-form">
     <div>
@@ -30,3 +35,5 @@
     <%= form.submit 'Submit', class: 'post-button' %>
   </div>
 <% end %>
+</div>
+</div>
