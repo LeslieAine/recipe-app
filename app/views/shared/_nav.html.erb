@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag 'nav' %>
+
+<div class="nav-wrapper">
+    <nav class="nav">
+        <div class="left-nav">
+            <img src="https://pbs.twimg.com/media/Fx8s0ZvaQAI1f33?format=png&name=small" class="logo"/>
+        </div>
+        <div class="right-nav">
+            <h3><%= current_user.email %></h3>
+            <div class="b-box">
+                <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "sign-out"%>
+            </div>
+        </div>
+    </nav>
+</div>
