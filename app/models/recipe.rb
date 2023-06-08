@@ -1,6 +1,6 @@
 class Recipe < ApplicationRecord
   belongs_to :user
-  has_many :recipe_foods
+  has_many :recipe_foods, dependent: :destroy
 
   validates :name, presence: { message: 'Name is required' },
                    length: { minimum: 3, message: 'Name must be at least 3 characters' }
