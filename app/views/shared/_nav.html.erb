@@ -3,7 +3,23 @@
 <div class="nav-wrapper">
     <nav class="nav">
         <div class="left-nav">
-            <img src="https://pbs.twimg.com/media/Fx8s0ZvaQAI1f33?format=png&name=small" class="logo"/>
+            <%= link_to home_index_path do%>
+                <img src="https://pbs.twimg.com/media/Fx8s0ZvaQAI1f33?format=png&name=small" class="logo"/>
+            <% end %>
+        </div>
+        <div class="nav-links">
+            <%= link_to foods_path, class: "links" do%>
+                My Foods
+            <%end%>
+            <%= link_to recipes_path, class: "links"  do%>
+                My Recipes
+            <%end%>
+            <%= link_to public_recipes_path, class: "links" do%>
+                Public Recipes
+            <%end%>
+            <%= link_to foods_path, class: "links" do%>
+                General Shopping List
+            <%end%>
         </div>
         <div class="right-nav">
             <h3><%= current_user.email %></h3>
