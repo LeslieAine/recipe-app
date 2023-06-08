@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag "food_new" %>
+
+<div class="page">
+<div class="page-wrapper">
+
+<h1>ADD FOOD</h1>
+<%= form_with model: @food, url: foods_path, method: :post, local: true, scope: :food do |form| %>
+  <div class="add-form">
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name, class: 'name-input' %><br>
+      <% form.object.errors.full_messages_for(:name).each do |message| %>
+        <div class="error-message"><%= message %></div>
+      <% end %>
+
+      <%= form.label :measurement_unit %><br>
+      <%= form.text_field :measurement_unit, class: 'measurement-input' %><br>
+      <% form.object.errors.full_messages_for(:measurement_unit).each do |message| %>
+        <div class="error-message"><%= message %></div>
+      <% end %>
+
+      <%= form.label :price %><br>
+      <%= form.text_field :price, class: 'price-input' %><br>
+      <% form.object.errors.full_messages_for(:price).each do |message| %>
+        <div class="error-message"><%= message %></div>
+      <% end %>
+
+      <%= form.label :quantity %><br>
+      <%= form.text_field :quantity, class: 'quantity-input' %><br>
+      <% form.object.errors.full_messages_for(:quantity).each do |message| %>
+        <div class="error-message"><%= message %></div>
+      <% end %>
+    </div>
+    <br>
+    <%= form.submit 'Submit', class: 'post-button' %>
+  </div>
+<% end %>
+</div>
+</div>
