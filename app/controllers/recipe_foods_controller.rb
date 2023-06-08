@@ -1,4 +1,5 @@
 class RecipeFoodsController < ApplicationController
+  load_and_authorize_resource :recipe
   def index
     @recipe_foods = RecipeFood.all
   end
