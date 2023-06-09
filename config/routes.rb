@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'home#index'
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'home#index', as: :authenticated_root
+  root 'home#index'
 
   resources :users do
     resources :foods, only: %i[index new create]
