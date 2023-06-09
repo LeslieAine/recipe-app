@@ -1,0 +1,35 @@
+<%= stylesheet_link_tag "food_index" %>
+<%= render "shared/nav"%>
+<h1><%= current_user.name %>'s FOOD LIST</h1>
+
+<div class="add-box">
+  <%= link_to "Add Food", new_food_path, class: "add-button" %>
+</div>
+
+<div class="table-wrapper">
+<% if Food.includes(:user).where(user_id: current_user.id).empty? %>
+    <h1> No Food added yet! </h1>
+<% else %>
+
+  <table class="food-table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Measurement unit</th>
+        <th>Unit price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% Food.includes(:user).where(user_id: current_user.id).each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.measurement_unit %></td>
+          <td><%= number_to_currency(food.price / food.quantity) %></td>
+          <td><%= button_to 'Delete', food_path(food.id), method: :delete %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>     
+</div>

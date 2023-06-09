@@ -1,0 +1,2 @@
+class GeneralShoppingList < ApplicationRecord
+end

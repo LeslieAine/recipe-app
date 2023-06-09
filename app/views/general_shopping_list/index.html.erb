@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag 'shopping_index'%>
+<%= render "shared/nav"%>
+
+<% if @foods.empty? %>
+<h1> Your Shopping List is Empty! </h1>
+<% else %>
+<h1>Shopping List</h1>
+<div class="shopping-summary">
+  <h2>Amount of food items to buy: <%= @foods.length %> </h2>
+  <h2 class='total-shopping'>Total value of food needed: <%= number_to_currency(@total_price) %></h2>
+</div>
+<div class="table-wrapper">
+
+  <table class="food-table">
+    <thead>
+      <tr>
+        <th>Food</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @food_item.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= "#{@quantity_difference[food.id]} #{food.measurement_unit}" %></td>
+          <td><%= number_to_currency(@prices[food.id])%></td>      
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>    
+  </div>
