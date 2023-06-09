@@ -52,6 +52,18 @@
   gap: 10rem;
 }
 
+.recipe_add {
+  display: flex;
+  gap: 5px;
+}
+
+.recipe_add_btn {
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-left: 15px;
+  padding-bottom: 15px;
+}
+
 /* For the switch */
 
 .form-group {
