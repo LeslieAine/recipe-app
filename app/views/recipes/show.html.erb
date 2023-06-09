@@ -1,3 +1,5 @@
+<%= render "shared/nav"%>
+
 <div class='recipe_info'>
 <h1 class= 'recipe_name_list'><%=@recipe.name%></h1>
 
@@ -17,7 +19,7 @@
 <h2>Cooking_time: <%= @recipe.cooking_time%></h2>
 <h2> Steps go here...</h2>
 <div class='recipe_gen_add_ing'>
-<button><%=link_to 'Generate Shopping List', recipe_shopping_lists_path(@recipe), class:'btn_recipe' %></button>
+<button><%=link_to 'Generate Shopping List', general_shopping_list_path(@recipe), class:'btn_recipe' %></button>
 <button><%=link_to 'Add Ingredients', new_recipe_recipe_food_path(@recipe), class:'btn_recipe' %></button>
 </div>
 <hr>
