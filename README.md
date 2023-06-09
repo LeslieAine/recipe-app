@@ -79,6 +79,11 @@ rails s
 - GitHub: [@LeslieAine](https://github.com/LeslieAine)
 - LinkedIn: [LeslieAine](https://linkedin.com/in/LeslieAine)
 
+👤 **Frempong**
+
+- GitHub: [@LeslieAine](https://github.com/frempongdev)
+- LinkedIn: [LeslieAine](https://linkedin.com/in/frempongdev)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
