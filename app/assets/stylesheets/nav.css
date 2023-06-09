@@ -35,7 +35,7 @@ h3 {
   /* border: 1px solid red; */
   width: 40%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .links {
@@ -44,7 +44,6 @@ h3 {
   color: black;
 }
 
-.links:hover{
+.links:hover {
   color: rgb(159, 159, 159);
 }
-

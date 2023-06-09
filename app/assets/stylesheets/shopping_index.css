@@ -1,8 +1,8 @@
 .shopping-summary {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .total-shopping {
-    margin-left: 3%;
+  margin-left: 3%;
 }
